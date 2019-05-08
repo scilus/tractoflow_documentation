@@ -11,7 +11,7 @@ Download the last release of TractoFlow pipeline:
 
 ::
 
-    $> wget https://github.com/scilus/tractoflow/archive/2.0.0.zip && unzip 2.0.0.zip
+    $> wget https://github.com/scilus/tractoflow/archive/2.0.1.zip && unzip 2.0.1.zip
 
 For developers
 ##############
