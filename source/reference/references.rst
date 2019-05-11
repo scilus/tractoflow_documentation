@@ -3,7 +3,7 @@ References
 
 If TractoFlow is used in a publication, please cite the following references:
 
-.. [Theaud19] G. Theaud, JC. Houde, F. Morency, M. Descoteaux A diffusion MRI pipeline leveraging Nextflow & Singularity: Robust, Efficient, Reproducible in time! ISMRM 2019. https://guillaumeth.github.io/data/theaud-etal-ismrm19_pipeline.pdf
+.. [Theaud19] G Theaud, JC Houde, A Bore, F Rheault, F Morency, M Descoteaux TractoFlow: A robust, efficient and reproducible diffusion MRI pipeline leveraging Nextflow & Singularity https://www.biorxiv.org/content/10.1101/631952v1
 .. [Kurtzer17] Kurtzer GM, Sochat V, Bauer MW Singularity: Scientific containers for mobility of compute. PLoS ONE 12(5) (2017): e0177459. https://doi.org/10.1371/journal.pone.0177459
 .. [DiTomaso17] P. Di Tommaso, et al. Nextflow enables reproducible computational workflows. Nature Biotechnology 35, 316–319 (2017) doi:10.1038/nbt.3820
 .. [Garyfallidis14] Garyfallidis, E., Brett, M., Amirbekian, B., Rokem, A., Van Der Walt, S., Descoteaux, M., Nimmo-Smith, I., 2014. Dipy, a library for the analysis of diffusion mri data. Frontiers in neuroinformatics 8, 8.
