@@ -61,9 +61,7 @@ to be executed with ``sbatch``.
     #SBATCH --mem=0
     #SBATCH --time=48:00:00
 
-    nextflow -c singularity.conf run tractoflow/main.nf --root input_folder\
-    --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img\
-    -resume
+    nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -resume
 
 To launch on multiple nodes, you must to use the MPI option that use Ignite executor.
 The following example use 2 nodes with 32 threads on each nodes. The follwing lines
@@ -80,9 +78,7 @@ must be saved in ``.sh`` file (e.g. ``cmd.sh``) to be executed with ``sbatch``.
 
     export NXF_CLUSTER_SEED=$(shuf -i 0-16777216 -n 1)
 
-    srun nextflow -c singularity.conf run tractoflow/main.nf --root input_folder\
-    --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img\
-    -with-mpi -resume
+    srun nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -with-mpi -resume
 
 As a local computer, you must to bind your storage disk to the singularity (Please see :ref:`mounted_partition` subsection above).
 
