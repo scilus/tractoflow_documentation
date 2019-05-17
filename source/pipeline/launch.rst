@@ -9,10 +9,10 @@ To run the pipeline, use the following command:
 ::
 
     # With Singularity
-    $> nextflow run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img
+    $> nextflow run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -resume
 
     # With Docker
-    $> nextflow run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker tractoflow:docker
+    $> nextflow run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker tractoflow:docker -resume
 
 Where ``DTI_SHELLS`` are the shells used to compute the DTI metrics
 (typically b-value < 1200 e.g. "0 1000") and ``FODF_SHELLS`` are the shells used
@@ -38,10 +38,10 @@ Then run the following command:
 ::
 
     # With Singularity
-    $> nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img
+    $> nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -resume
 
     # With Docker
-    $> nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker tractoflow:docker
+    $> nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker tractoflow:docker -resume
 
 High Performance Computer (HPC)
 -------------------------------
