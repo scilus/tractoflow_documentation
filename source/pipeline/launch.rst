@@ -24,7 +24,7 @@ Mounted partition
 #################
 
 If your data is not on the same storage disk than your OS (e.g. a mounting disk,
-a USB key, an external disk, ...), you must to bind your disk to the singularity
+a USB stick, an external disk, ...), you must bind your disk to the singularity
 container. Create a file (e.g. ``singularity.conf``) and write the following line:
 
 ::
@@ -80,7 +80,7 @@ must be saved in ``.sh`` file (e.g. ``cmd.sh``) to be executed with ``sbatch``.
 
     srun nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -with-mpi -resume
 
-As a local computer, you must to bind your storage disk to the singularity (Please see :ref:`mounted_partition` subsection above).
+As a local computer, you must bind your storage disk to the singularity (Please see :ref:`mounted_partition` subsection above).
 
 To launch the pipeline on the HPC:
 
