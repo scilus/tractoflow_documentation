@@ -60,6 +60,18 @@ Then, you can build the singularity image:
 Docker for TractoFlow
 ---------------------
 
+First, please bind /var/folders in Docker (Preferences -> File Sharing).
+
+- Add manually /var/folders (see figure below).
+
+.. image:: ../data/docker.png
+   :scale: 70 %
+
+- Click on Apply & Restart.
+
+Then, change the number of CPUs and RAM (recommended: 8 CPUs and 16Gb of RAM) in
+Docker (Preferences -> Advanced) and click on Apply & Restart.
+
 Release
 #######
 
