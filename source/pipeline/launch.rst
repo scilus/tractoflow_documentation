@@ -18,6 +18,9 @@ Where ``DTI_SHELLS`` are the shells used to compute the DTI metrics
 (typically b-value < 1200 e.g. "0 1000") and ``FODF_SHELLS`` are the shells used
 to compute the fODF metrics (typically b > 700 e.g. "0 1000 2000").
 
+If you want to skip steps already processed by an anterior run, you can add `-resume` option in the command line.
+
+
 .. _mounted_partition:
 
 Mounted partition
