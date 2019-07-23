@@ -8,6 +8,10 @@ is to be fast and reproducible.
 
 .. _SCIL: http://scil.usherbrooke.ca/en/
 
+For Linux users, please see this section :ref:`singularity-tractoflow` for setup.
+
+For MacOS users, please see this section :ref:`docker-tractoflow` for setup.
+
 .. toctree::
    :maxdepth: 1
    :caption: Install
