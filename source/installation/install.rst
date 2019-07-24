@@ -26,6 +26,9 @@ Clone TractoFlow pipeline repository:
     # Clone with SSH
     $> git clone git@github.com:scilus/tractoflow.git
 
+
+.. _singularity-tractoflow:
+
 Singularity for TractoFlow
 --------------------------
 
@@ -57,8 +60,22 @@ Then, you can build the singularity image:
 
     $> singularity build singularity_name.img singularity_tractoflow.def
 
+.. _docker-tractoflow:
+
 Docker for TractoFlow
 ---------------------
+
+First, please bind /var/folders in Docker (Preferences -> File Sharing).
+
+- Add manually /var/folders (see figure below).
+
+.. image:: ../data/docker.png
+   :scale: 70 %
+
+- Click on Apply & Restart.
+
+Then, change the number of CPUs and RAM (recommended: 8 CPUs and 16Gb of RAM) in
+Docker (Preferences -> Advanced) and click on Apply & Restart.
 
 Release
 #######
@@ -67,7 +84,7 @@ Download the last release of the Docker container for TractoFlow:
 
 ::
 
-    $> wget http://scil.dinf.usherbrooke.ca/containers_list/docker_tractoflow_2.0.0_a0cacfb_2019-04-25.tar.gz
+    $> wget http://scil.usherbrooke.ca/containers_list/docker_tractoflow_2.0.0_a0cacfb_2019-04-25.tar.gz
 
 
 Install the Docker container:

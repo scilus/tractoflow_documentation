@@ -42,7 +42,7 @@ Singularity
 Our Singularity container currently works on Linux. We highly recommend to use Singularity
 on a Linux local computer or on a HPC.
 
-If you want to use Docker on Windows or MacOS, please see the Docker section.
+If you want to use Docker on Windows or MacOS, please see the :ref:`docker-tractoflow` section.
 
 Local Computer
 ##############
