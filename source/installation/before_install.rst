@@ -17,14 +17,14 @@ Local Computer
 
 ::
 
-    $> curl -s https://get.nextflow.io | bash && chmod +x nextflow && \
-    echo 'export PATH=$PATH:'$(pwd) >> ~/.bashrc && source ~/.bashrc
+    $> wget https://github.com/nextflow-io/nextflow/releases/download/v19.04.0/nextflow && chmod +x nextflow && \
+    echo 'export PATH=$PATH:'$(pwd) >> ~/.bash_profile && source ~/.bash_profile
 
 High Performance computer (HPC)
 ###############################
 
 1. Try ``module load java/1.8.0_121`` or check with your administrator or on the HPC website.
-2. Use ``wget`` to install the last Nextlow edge-all `release`_ , change the name, add execution rights and add the nextflow path in the bashrc.
+2. Use ``wget`` to install the last Nextlow edge-all `release`_ , change the name, add execution rights and add the nextflow path in the bash_profile.
 
 ::
 
@@ -32,7 +32,7 @@ High Performance computer (HPC)
 
     $> wget https://github.com/nextflow-io/nextflow/releases/download/v19.01.0/nextflow-19.01.0-all && \
     mv nextflow-19.01.0-all nextflow && \
-    chmod +x nextflow && echo 'export PATH=$PATH:'$(pwd) >> ~/.bashrc && source ~/.bashrc
+    chmod +x nextflow && echo 'export PATH=$PATH:'$(pwd) >> ~/.bash_profile && source ~/.bash_profile
 
 .. _release: https://github.com/nextflow-io/nextflow/releases
 
