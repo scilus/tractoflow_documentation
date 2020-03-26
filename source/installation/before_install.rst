@@ -12,7 +12,7 @@ Nextflow
 
 Local Computer
 ##############
-1. Before installing check your current version ``java -version``. If return something as ``java version "1.X"`` and X is 8 or later, you can skip this step else install java (try ``module load java``).
+1. Before installing check your current version ``java -version``. If return something as ``java version "1.X"`` and X is 8 to 11 (nextflow is not tested with java 13), you can skip this step else install java (try ``module load java/(version)``. Hint, use tab to see the available version. For nextflow, choose a version between 8 and 11).
 2. Install Nextflow:
 
 ::
