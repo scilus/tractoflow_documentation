@@ -9,9 +9,13 @@ To run the pipeline, use the following command:
 ::
 
     # With Singularity
+    $> nextflow run tractoflow/main.nf --bids input_bids --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -resume
+    # Or
     $> nextflow run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -resume
 
     # With Docker
+    $> nextflow run tractoflow/main.nf --bids input_bids --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker singularity_name.img -resume
+    # Or
     $> nextflow run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker tractoflow:docker -resume
 
 Where ``DTI_SHELLS`` are the shells used to compute the DTI metrics
@@ -19,32 +23,6 @@ Where ``DTI_SHELLS`` are the shells used to compute the DTI metrics
 to compute the fODF metrics (typically b > 700 e.g. "0 1000 2000").
 
 If you want to skip steps already processed by an anterior run, you can add `-resume` option in the command line.
-
-
-.. _mounted_partition:
-
-Mounted partition
-#################
-
-If your data is not on the same storage disk than your OS (e.g. a mounting disk,
-a USB stick, an external disk, ...), you must bind your disk to the singularity
-container. Create a file (e.g. ``singularity.conf``) and write the following line:
-
-::
-
-    singularity.runOptions="--bind PATH_TO_DATA"
-
-Where ``PATH_TO_DATA`` is the path to your storage disk.
-
-Then run the following command:
-
-::
-
-    # With Singularity
-    $> nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -resume
-
-    # With Docker
-    $> nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker tractoflow:docker -resume
 
 High Performance Computer (HPC)
 -------------------------------
@@ -82,8 +60,6 @@ must be saved in ``.sh`` file (e.g. ``cmd.sh``) to be executed with ``sbatch``.
     export NXF_CLUSTER_SEED=$(shuf -i 0-16777216 -n 1)
 
     srun nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -with-mpi -resume
-
-As a local computer, you must bind your storage disk to the singularity (Please see :ref:`mounted_partition` subsection above).
 
 To launch the pipeline on the HPC:
 

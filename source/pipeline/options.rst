@@ -38,8 +38,8 @@ Options list
     Encoding direction of the DWI [x, y, z].
     See FSL Topup documentation for more info.
 
-``--dwell_time VALUE`` (default: 0.062)
-    Dwell-time value.
+``--readout VALUE`` (default: 0.062)
+    Readout time value.
 
 ``--run_eddy BOOL`` (default: true)
     Run Eddy.
@@ -57,6 +57,9 @@ Options list
 ``--bet_dwi_final_f THRESHOLD`` (default: 0.16)
     Fractional Intensity threshold (-f for the bet FSL command) for the final DWI BET.
 
+``--fa_mask_threshold THRESHOLD`` (default: 0.4)
+    FA maximum value to be considered as WM for Normalize DWI.
+
 ``--run_resample_dwi BOOL`` (default: true)
     Run resample DWI.
     Resampling is done at the resolution given by --dwi_resolution option.
@@ -65,6 +68,19 @@ Options list
     DWI resolution (in mm).
 
 ``--dwi_interpolation METHOD`` (default: lin)
+    Interpolation method [nn, lin, quad, cubic].
+
+``--run_t1_denoising BOOL`` (default: true)
+    Run T1 denoising using NLmean algorithm.
+
+``--run_resample_t1 BOOL`` (default: true)
+    Run resample T1.
+    Resampling is done at the resolution given by --t1_resolution option.
+
+``--t1_resolution RESOLUTION`` (default: 1)
+    T1 resolution (in mm).
+
+``--t1_interpolation METHOD`` (default: lin)
     Interpolation method [nn, lin, quad, cubic].
 
 ``--number_of_tissues NUMBER`` (default: 3)
@@ -141,7 +157,7 @@ Options list
     Random seed.
     Fixed for reproducible seeds
 
-``--step SIZE`` (default: 0.1)
+``--step SIZE`` (default: 0.5)
     Step size in mm.
 
 ``--theta ANGLE`` (default: 20)
@@ -159,6 +175,9 @@ Options list
 ``--compress_value THRESHOLD`` (default: 0.2)
     Compression error threshold in mm.
     See [Presseau et al Neuroimage 2015] and [Rheault et al Front Neuroinform 2017]
+
+``--save_seeds BOOL`` (default: true)
+    Save tracking seeds in the output tractogram.
 
 ``--template_t1 PATH`` (default: /human-data/mni_152_sym_09c/t1)
     Path to the template T1 directory for antsBrainExtraction.
