@@ -20,32 +20,6 @@ to compute the fODF metrics (typically b > 700 e.g. "0 1000 2000").
 
 If you want to skip steps already processed by an anterior run, you can add `-resume` option in the command line.
 
-
-.. _mounted_partition:
-
-Mounted partition
-#################
-
-If your data is not on the same storage disk than your OS (e.g. a mounting disk,
-a USB stick, an external disk, ...), you must bind your disk to the singularity
-container. Create a file (e.g. ``singularity.conf``) and write the following line:
-
-::
-
-    singularity.runOptions="--bind PATH_TO_DATA"
-
-Where ``PATH_TO_DATA`` is the path to your storage disk.
-
-Then run the following command:
-
-::
-
-    # With Singularity
-    $> nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -resume
-
-    # With Docker
-    $> nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker tractoflow:docker -resume
-
 High Performance Computer (HPC)
 -------------------------------
 
@@ -83,10 +57,37 @@ must be saved in ``.sh`` file (e.g. ``cmd.sh``) to be executed with ``sbatch``.
 
     srun nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -with-mpi -resume
 
-As a local computer, you must bind your storage disk to the singularity (Please see :ref:`mounted_partition` subsection above).
-
 To launch the pipeline on the HPC:
 
 ::
 
     $> sbatch cmd.sh
+
+.. _mounted_partition:
+
+Mounted partition
+-----------------
+
+.. warning::
+    .. deprecated:: 2.1.0
+        Binding storage disk is automatically done.
+
+If your data is not on the same storage disk than your OS (e.g. a mounting disk,
+a USB stick, an external disk, ...), you must bind your disk to the singularity
+container. Create a file (e.g. ``singularity.conf``) and write the following line:
+
+::
+
+    singularity.runOptions="--bind PATH_TO_DATA"
+
+Where ``PATH_TO_DATA`` is the path to your storage disk.
+
+Then run the following command:
+
+::
+
+    # With Singularity
+    $> nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -resume
+
+    # With Docker
+    $> nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker tractoflow:docker -resume

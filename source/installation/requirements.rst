@@ -1,5 +1,5 @@
-Before install
-==============
+Requirements
+============
 
 To run the pipeline you must install `Nextflow`_.
 To use our Singularity container, you must install the `Singularity`_ package.
@@ -12,7 +12,7 @@ Nextflow
 
 Local Computer
 ##############
-1. Before installing check your current version ``java -version``. If return something as ``java version "1.X"`` and X is 8 or later, you can skip this step else install java.
+1. Before installing check your current version ``java -version``. If return something as ``java version "1.X"`` and X is 8 up to 11, you can skip this step else install java.
 2. Install Nextflow:
 
 ::
@@ -27,6 +27,7 @@ High Performance computer (HPC)
 2. Use ``wget`` to install Nextflow, change the name, add execution rights and add the Nextflow path in the bash_profile.
 
 ::
+
     $> wget https://github.com/nextflow-io/nextflow/releases/download/v19.04.0/nextflow-19.04.0-all && \
     mv nextflow-19.04.0-all nextflow && \
     chmod +x nextflow && echo 'export PATH=$PATH:'$(pwd) >> ~/.bash_profile && source ~/.bash_profile
@@ -55,7 +56,7 @@ If you are Debian/Ubuntu, you can get neurodebian:
 High Performance computer (HPC)
 ###############################
 
-Please try ``module load singularity/2.6`` or check with an administrator or on the HPC website.
+Please try ``module load singularity/3.5`` or check with an administrator or on the HPC website.
 
 Docker
 ------
