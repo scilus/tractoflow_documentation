@@ -14,9 +14,9 @@ To run the pipeline, use the following command:
     $> nextflow run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -resume
 
     # With Docker
-    $> nextflow run tractoflow/main.nf --bids input_bids --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker singularity_name.img -resume
+    $> nextflow run tractoflow/main.nf --bids input_bids --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker scilus/docker-tractoflow:2.1.0 -resume
     # Or
-    $> nextflow run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker tractoflow:docker -resume
+    $> nextflow run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker scilus/docker-tractoflow:2.1.0 -resume
 
 Where ``DTI_SHELLS`` are the shells used to compute the DTI metrics
 (typically b-value < 1200 e.g. "0 1000") and ``FODF_SHELLS`` are the shells used
