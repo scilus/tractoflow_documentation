@@ -21,4 +21,4 @@ Profiles available
 
 ``fully_reproducible``
     When this profile is used, all the parameters will be set to have 100% reproducible results.
-    This profile consist to set multi-thread parameters to be fully reproducible.
+    This profile consist to set multi-thread parameters to be fully reproducible [Theaud20].

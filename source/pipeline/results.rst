@@ -14,3 +14,6 @@ commands:
 
     # On HPC
     $> rsync -rL login@adress:/HPC_PATH/results NEW_PATH/results
+    # Or compress before and rsync after
+    $> tar cvzfh /HPC_PATH/results.tar.gz /HPC_PATH/results
+    $> rsync login@adress:/HPC_PATH/results.tar.gz NEW_PATH/results.tar.gz

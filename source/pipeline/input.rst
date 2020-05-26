@@ -8,8 +8,8 @@ BIDS parameter
 
 We recommend to use ``dcm2bids`` (https://github.com/cbedetti/Dcm2Bids) to create BIDS datasets.
 
-TractoFlow support BIDS as input data using ``--bids YOUR_BIDS_DATASET``. TractoFlow do some verifications
-before launching the procssing to validate BIDS format.
+TractoFlow supports BIDS as input data using ``--bids YOUR_BIDS_DATASET``. TractoFlow does some verifications
+before launching the processing to valide the BIDS format.
 
 In the case that some tags or informations are missing, TractoFlow will create a json file in ``results/Read_BIDS``.
 Please complete missing informations and relaunch the pipeline replacing ``--bids YOUR_BIDS_DATASET`` with ``--bids_config results/Read_BIDS/tractoflow_bids_struct.json``.
@@ -19,8 +19,8 @@ If you have any problems, contact us on NeuroStar (https://neurostars.org/tag/tr
 Root parameter
 --------------
 
-The input root parameter is called using ``--root`` and require the following file
-structure:
+It is possible not to follow the BIDS format. In that case, the input root parameter
+is called using ``--root`` and requires the following file structure:
 
 ::
 
