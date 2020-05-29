@@ -39,7 +39,7 @@ Download the last release of the Singularity container for TractoFlow:
 
 ::
 
-    $> wget http://scil.usherbrooke.ca/containers_list/tractoflow_2.1.0_4112d02_2020-05-26.img
+    $> wget http://scil.usherbrooke.ca/containers_list/tractoflow_2.1.0_feb64b9_2020-05-29.img
 
 For developers
 ##############
