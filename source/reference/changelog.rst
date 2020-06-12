@@ -3,7 +3,7 @@ Changelog
 
 2.1.0
 #########
-Date: 22 May 2020
+Date: xx-xx-xxxx
 
 New features:
 
@@ -13,7 +13,6 @@ New features:
 
 New options:
 
-- save_seeds : save tracking seeds
 - run_t1_denoising: Activate or deactivate T1 denoising
 
 2.0.1

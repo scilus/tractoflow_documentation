@@ -176,9 +176,6 @@ Options list
     Compression error threshold in mm.
     See [Presseau et al Neuroimage 2015] and [Rheault et al Front Neuroinform 2017]
 
-``--save_seeds BOOL`` (default: true)
-    Save tracking seeds in the output tractogram.
-
 ``--template_t1 PATH`` (default: /human-data/mni_152_sym_09c/t1)
     Path to the template T1 directory for antsBrainExtraction.
     The folder must contain t1_template.nii.gz and t1_brain_probability_map.nii.gz.
