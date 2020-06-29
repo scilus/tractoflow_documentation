@@ -3,7 +3,7 @@ Changelog
 
 2.1.0
 #########
-Date: xx-xx-xxxx
+Date: 29 Jun 2020
 
 New features:
 
