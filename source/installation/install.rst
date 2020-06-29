@@ -1,6 +1,14 @@
 Install
 =======
 
+Easy install method
+-------------------
+
+Enter this command in your terminal (it downloads the container and TractoFlow code in the current directory):
+::
+
+    curl -s https://tractoflow-documentation.readthedocs.io/en/2.1.0/install.sh | bash
+
 TractoFlow pipeline
 -------------------
 
