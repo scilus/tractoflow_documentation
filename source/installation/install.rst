@@ -1,6 +1,14 @@
 Install
 =======
 
+Easy install method
+-------------------
+
+Enter this command in your terminal (it downloads the container and TractoFlow code in the current directory):
+::
+
+    curl -s https://tractoflow-documentation.readthedocs.io/en/2.1.0/install.sh | bash
+
 TractoFlow pipeline
 -------------------
 
@@ -39,7 +47,7 @@ Download the last release of the Singularity container for TractoFlow:
 
 ::
 
-    $> wget http://scil.usherbrooke.ca/containers_list/tractoflow_2.1.0_feb64b9_2020-05-29.img
+    $> wget http://scil.dinf.usherbrooke.ca/containers_list/tractoflow_2.1.0_5f749f3_2020-06-29.img
 
 For developers
 ##############
