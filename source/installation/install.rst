@@ -7,7 +7,7 @@ Easy install method
 Enter this command in your terminal (it downloads the container and TractoFlow code in the current directory):
 ::
 
-    curl -s https://tractoflow-documentation.readthedocs.io/en/2.1.0/install.sh | bash
+    curl -s https://tractoflow-documentation.readthedocs.io/en/2.1.1/install.sh | bash
 
 TractoFlow pipeline
 -------------------
@@ -19,7 +19,7 @@ Download the last release of TractoFlow pipeline:
 
 ::
 
-    $> wget https://github.com/scilus/tractoflow/releases/download/2.1.0/tractoflow-2.1.0.zip && unzip tractoflow-2.1.0.zip
+    $> wget https://github.com/scilus/tractoflow/releases/download/2.1.1/tractoflow-2.1.1.zip && unzip tractoflow-2.1.1.zip
 
 For developers
 ##############

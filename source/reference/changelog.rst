@@ -1,6 +1,12 @@
 Changelog
 =========
 
+2.1.1
+#########
+Date: 08 Jul 2020
+
+Support 4D reverse B0 images.
+
 2.1.0
 #########
 Date: 29 Jun 2020
