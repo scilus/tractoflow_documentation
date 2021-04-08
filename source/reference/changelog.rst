@@ -1,11 +1,25 @@
 Changelog
 =========
 
+2.2.1
+#########
+Date: 09 April 2021
+
+Bug Fixed:
+  - fully reproducible (ANTS_RANDOM_SEED fixed)
+  - Tracking with FA (typo)
+
+New options:
+  - participants_label: select specific subjects (BIDS input)
+  - clean_bids: remove subject that are not complete (BIDS input)
+
 2.1.1
 #########
 Date: 08 Jul 2020
 
-Support 4D reverse B0 images.
+New features:
+
+  - Support 4D reverse B0 images.
 
 2.1.0
 #########

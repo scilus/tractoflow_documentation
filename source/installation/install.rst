@@ -7,7 +7,7 @@ Easy install method
 Enter this command in your terminal (it downloads the container and TractoFlow code in the current directory):
 ::
 
-    curl -s https://tractoflow-documentation.readthedocs.io/en/2.1.1/install.sh | bash
+    curl -s https://tractoflow-documentation.readthedocs.io/en/2.2.1/install.sh | bash
 
 TractoFlow pipeline
 -------------------
@@ -19,7 +19,7 @@ Download the last release of TractoFlow pipeline:
 
 ::
 
-    $> wget https://github.com/scilus/tractoflow/releases/download/2.1.1/tractoflow-2.1.1.zip && unzip tractoflow-2.1.1.zip
+    $> wget https://github.com/scilus/tractoflow/releases/download/2.2.1/tractoflow-2.2.1.zip && unzip tractoflow-2.2.1.zip
 
 For developers
 ##############
@@ -47,7 +47,7 @@ Download the last release of the Singularity container for TractoFlow:
 
 ::
 
-    $> wget http://scil.dinf.usherbrooke.ca/containers_list/tractoflow_2.1.1_650f776_2020-07-15.img
+    $> wget http://scil.dinf.usherbrooke.ca/containers_list/tractoflow_2.2.1
 
 For developers
 ##############
@@ -80,6 +80,6 @@ Download the last release of the Docker container for TractoFlow:
 
 ::
 
-    $> docker pull scilus/docker-tractoflow:2.1.1
+    $> docker pull scilus/docker-tractoflow:2.2.1
 
 Please see :ref:`profiles` section to use `macos` profile.

@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = u'TractoFlow-documentation'
-copyright = u'2019, SCIL'
+copyright = u'2021, SCIL'
 author = u'SCIL'
 
 # The short X.Y version

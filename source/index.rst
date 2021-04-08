@@ -2,7 +2,7 @@ Welcome to the TractoFlow user documentation!
 =============================================
 
 .. note::
-    New release available: 2.1.1.
+    New release available: 2.2.1.
     TractoFlow now support BIDS as input data.
 
 TractoFlow pipeline is developed by the Sherbrooke Connectivity Imaging Lab (`SCIL`_)
