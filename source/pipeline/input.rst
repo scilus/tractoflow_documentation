@@ -6,7 +6,7 @@ Two types of input are available in TractoFlow: BIDS and an in-house structure.
 BIDS parameter
 --------------
 
-We recommend to use ``dcm2bids`` (https://github.com/cbedetti/Dcm2Bids) to create BIDS datasets.
+We recommend to use ``dcm2bids`` (https://github.com/unfmontreal/Dcm2Bids) to create BIDS datasets.
 
 TractoFlow supports BIDS as input data using ``--bids YOUR_BIDS_DATASET``. TractoFlow does some verifications
 before launching the processing to valide the BIDS format.

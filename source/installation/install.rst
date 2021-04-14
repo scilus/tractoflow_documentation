@@ -47,7 +47,7 @@ Download the last release of the Singularity container for TractoFlow:
 
 ::
 
-    $> wget http://scil.dinf.usherbrooke.ca/containers_list/tractoflow_2.2.1
+    $> wget http://scil.dinf.usherbrooke.ca/containers_list/tractoflow_2.2.1_b9a527_2021-04-13.sif
 
 For developers
 ##############
@@ -80,6 +80,6 @@ Download the last release of the Docker container for TractoFlow:
 
 ::
 
-    $> docker pull scilus/docker-tractoflow:2.2.1
+    $> docker pull scilus/tractoflow:2.2.1
 
 Please see :ref:`profiles` section to use `macos` profile.
