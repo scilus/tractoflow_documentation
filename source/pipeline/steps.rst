@@ -38,4 +38,8 @@ T1 processes
 
 Tractography
 ------------
-The particle filter tractography is performed. Two types of seeding are available: WM-GM interface or WM mask.
+    * Particule Filter Tractography
+    * Local tracking (Optional)
+
+
+The particle filter tractography is performed by default. Three types of seeding are available: WM-GM interface, WM mask or FA.

@@ -4,6 +4,20 @@ Options
 To display the options of Tractoflow, please use
 ``nextflow run tractoflow/main.nf --help``.
 
+Optional BIDS arguments
+------------
+
+``--participants_label "SUBID1 SUBID2"`` (default: none)
+  The label(s) of the specific participant(s) you want to analyzed.
+  It does not include "sub-".
+  Please write one or more subjects between quotes e.g. (--participants_label "01 02 04")
+  If this parameter is not provided all subjects should be analyzed
+
+
+``-clean_bids BOOL`` (default: false)
+  If set, it will remove all the participants that are missing any information.
+
+
 Options list
 ------------
 ``--b0_thr_extract_b0 MAX_VALUE``  (default: 10)
@@ -134,47 +148,97 @@ Options list
     Minimal threshold of MD in mm^2/s to be considered as ventricule voxel.
     Used to compute the ventricules mask and find the maximum fODF amplitude in the ventricules.
 
-``--wm_seeding BOOL`` (default: true)
-    If '--wm_seeding true', use the WM-GM interface and the WM mask as seeding mask,
-    else use the WM-GM interface as seeding mask.
 
-``--algo ALGO`` (default: prob)
-    Tracking algorithm [prob, det].
+Optional PFT Tracking arguments
+------------
 
-    | prob: streamline probabilistic.
-    | det: streamline deterministic.
+``--run_pft_tracking BOOL`` (default: true).
+    [PFT] Run Particle Filter Tracking (PFT)
 
-``--seeding TYPE`` (default: npv)
-    Seeding type [npv, nt].
+``--pft_seeding_mask_type TYPE`` (default: wm)
+    [PFT] Seeding mask type [wm, interface, fa].
 
-    | npv: number of seeds per voxel of the seeding mask
-    | nt: total number of seeds randomly placed in the seeding mask
+``--pft_fa_seeding_mask_threshold THRESHOLD`` (default: 0.1)
+    [PFT] FA threshold for FA seeding mask.
 
-``--nbr_seeds NUMBER`` (default: 10)
-    Number of seeds related to the seeding type param.
+``--pft_algo ALGO`` (default: prob)
+    [PFT] Tracking algorithm [prob, det].
 
-``--random SEED`` (default: 0)
-    Random seed.
-    Fixed for reproducible seeds
+``--pft_seeding SEEDING`` (default: npv)
+    [PFT] Seeding type [npv, nt].
 
-``--step SIZE`` (default: 0.5)
-    Step size in mm.
+``--pft_nbr_seeds NBRSEEDS``  (default: 10)
+    [PFT] Number of seeds related to the seeding type param.
 
-``--theta ANGLE`` (default: 20)
-    Maximum angle between 2 steps in degrees.
+``--pft_step SIZE`` (default: 0.5)
+    [PFT] Step size.
 
-``--min_len LENGTH`` (default: 20)
-    Minimum length in mm.
+``--pft_theta ANGLE`` (default: 20)
+    [PFT] Maximum angle between 2 steps.
 
-``--max_len LENGTH`` (default: 200)
-    Maximum length in mm.
+``--pft_min_len LENGTH`` (default: 20)
+    [PFT] Minimum length.
 
-``--compress_streamlines BOOL`` (default: true)
-    Compress streamlines.
+``--pft_max_len LENGTH`` (default: 200)
+    [PFT] Maximum length.
 
-``--compress_value THRESHOLD`` (default: 0.2)
-    Compression error threshold in mm.
-    See [Presseau et al Neuroimage 2015] and [Rheault et al Front Neuroinform 2017]
+``--pft_compress_streamlines BOOL`` (default: true)
+    [PFT] Compress streamlines.
+
+``--pft_compress_value THRESHOLD`` (default: 0.2)
+    [PFT] Compression error threshold.
+    See [Presseau et al Neuroimage 2015] and [Rheault et al Front Neuroinform 2017].
+
+``--pft_random_seed RANDOMSEED`` (default: 0)
+    [PFT] List of random seed numbers for the random number generator.
+    Please write them as list separated using commat WITHOUT SPACE e.g. (--pft_random_seed 0,1,2)
+
+
+Optional Local Tracking arguments
+------------
+
+``--run_local_tracking BOOL`` (default: false).
+    [LOCAL] Run Local Tracking
+
+``--local_seeding_mask_type TYPE`` (default: wm)
+    [LOCAL] Seeding mask type [wm, interface, fa].
+
+``--local_fa_seeding_mask_threshold THRESHOLD`` (default: 0.1)
+    [LOCAL] FA threshold for FA seeding mask.
+
+``--local_algo ALGO`` (default: prob)
+    [LOCAL] Tracking algorithm [prob, det].
+
+``--local_seeding SEEDING`` (default: npv)
+    [LOCAL] Seeding type [npv, nt].
+
+``--local_nbr_seeds NBRSEEDS``  (default: 10)
+    [LOCAL] Number of seeds related to the seeding type param.
+
+``--local_step SIZE`` (default: 0.5)
+    [LOCAL] Step size.
+
+``--local_theta ANGLE`` (default: 20)
+    [LOCAL] Maximum angle between 2 steps.
+
+``--local_min_len LENGTH`` (default: 20)
+    [LOCAL] Minimum length.
+
+``--local_max_len LENGTH`` (default: 200)
+    [LOCAL] Maximum length.
+
+``--local_compress_streamlines BOOL`` (default: true)
+    [LOCAL] Compress streamlines.
+
+``--local_compress_value THRESHOLD`` (default: 0.2)
+    [LOCAL] Compression error threshold.
+    See [Presseau et al Neuroimage 2015] and [Rheault et al Front Neuroinform 2017].
+
+``--local_random_seed RANDOMSEED`` (default: 0)
+    [LOCAL] List of random seed numbers for the random number generator.
+    Please write them as list separated using commat WITHOUT SPACE e.g. (--local_random_seed 0,1,2)
+
+
 
 ``--template_t1 PATH`` (default: /human-data/mni_152_sym_09c/t1)
     Path to the template T1 directory for antsBrainExtraction.

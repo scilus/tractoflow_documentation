@@ -23,7 +23,7 @@ Local Computer
 High Performance computer (HPC)
 ###############################
 
-1. Try ``module load java/1.8.0_121`` or check with your administrator or on the HPC website.
+1. Try ```module load nixpkgs/16.09 module load java/1.8.0_192`` or check with your administrator or on the HPC website.
 2. Use ``wget`` to install Nextflow, change the name, add execution rights and add the Nextflow path in the bash_profile.
 
 ::
@@ -74,4 +74,3 @@ Windows
 To install Docker on your Windows computer, please check the following link:
 
 https://hub.docker.com/editions/community/docker-ce-desktop-windows
-
