@@ -1,13 +1,17 @@
-Install
-=======
+Fast Installation
+=================
 
 Easy install method
 -------------------
 
-Enter this command in your terminal (it downloads the container and TractoFlow code in the current directory):
+Enter this command in your terminal (it downloads the container and TractoFlow code in the current directory - Make sure nextflow is already installed before running this command):
 ::
 
     curl -s https://tractoflow-documentation.readthedocs.io/en/2.3.0/install.sh | bash
+
+
+Detailed Installation
+=====================
 
 TractoFlow pipeline
 -------------------
@@ -15,11 +19,11 @@ TractoFlow pipeline
 Release
 #######
 
-Download the last release of TractoFlow pipeline:
+Download TractoFlow pipeline:
 
 ::
 
-    $> wget https://github.com/scilus/tractoflow/releases/download/2.3.0/tractoflow-2.3.0.zip && unzip tractoflow-2.3.0.zip
+    $> nextflow pull scilus/tractoflow
 
 For developers
 ##############
@@ -34,6 +38,11 @@ Clone TractoFlow pipeline repository:
     # Clone with SSH
     $> git clone git@github.com:scilus/tractoflow.git
 
+As a developer you will have to run tractoflow using this command:
+
+::
+
+  nextflow run tractoflow/main.nf --help
 
 .. _singularity-tractoflow:
 
@@ -72,7 +81,7 @@ Then, you can build the singularity image:
 
 ::
 
-    $> singularity build singularity_name.sif singularity_tractoflow.def
+    $> singularity build singularity_name.sif singularity_scilus.def
 
 .. _docker-tractoflow:
 
