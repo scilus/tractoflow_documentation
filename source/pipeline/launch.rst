@@ -9,9 +9,9 @@ To run the pipeline, use the following command:
 ::
 
     # With Singularity
-    $> nextflow run tractoflow/main.nf --bids input_bids --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -resume
+    $> nextflow run tractoflow/main.nf --bids input_bids --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.sif -resume
     # Or
-    $> nextflow run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -resume
+    $> nextflow run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.sif -resume
 
     # With Docker
     $> nextflow run tractoflow/main.nf --bids input_bids --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker scilus/docker-tractoflow:2.1.1 -resume
@@ -42,7 +42,7 @@ to be executed with ``sbatch``.
     #SBATCH --mem=0
     #SBATCH --time=48:00:00
 
-    nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -resume
+    nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.sif -resume
 
 To launch on multiple nodes, you must to use the MPI option that use Ignite executor.
 The following example use 2 nodes with 32 threads on each nodes. The follwing lines
@@ -59,7 +59,7 @@ must be saved in ``.sh`` file (e.g. ``cmd.sh``) to be executed with ``sbatch``.
 
     export NXF_CLUSTER_SEED=$(shuf -i 0-16777216 -n 1)
 
-    srun nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.img -with-mpi -resume
+    srun nextflow -c singularity.conf run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.sif -with-mpi -resume
 
 To launch the pipeline on the HPC:
 

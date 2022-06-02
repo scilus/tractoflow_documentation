@@ -4,6 +4,17 @@ Options
 To display the options of Tractoflow, please use
 ``nextflow run tractoflow/main.nf --help``.
 
+Mandatory arguments
+------------
+
+``--dti_shells dti_shells``
+  Shells selected to compute the dti metrics (generally b < 1200).
+  Please write them between quotes e.g. (--dti_shells "0 300").
+
+``--fodf_shells fodf_shells``
+  Shells selected to compute the fodf metrics (generally b > 700).
+  Please write them between quotes e.g. (--fodf_shells "0 1000").
+
 Optional BIDS arguments
 ------------
 

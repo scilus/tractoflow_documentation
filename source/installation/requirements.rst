@@ -17,7 +17,7 @@ Local Computer
 
 ::
 
-    $> wget https://github.com/nextflow-io/nextflow/releases/download/v19.04.0/nextflow && chmod +x nextflow && \
+    $> wget https://github.com/nextflow-io/nextflow/releases/download/v21.10.6/nextflow && chmod +x nextflow && \
     echo 'export PATH=$PATH:'$(pwd) >> ~/.bash_profile && source ~/.bash_profile
 
 High Performance computer (HPC)
@@ -28,8 +28,8 @@ High Performance computer (HPC)
 
 ::
 
-    $> wget https://github.com/nextflow-io/nextflow/releases/download/v19.04.0/nextflow-19.04.0-all && \
-    mv nextflow-19.04.0-all nextflow && \
+    $> wget https://github.com/nextflow-io/nextflow/releases/download/v21.10.6/nextflow-21.10.6-all && \
+    mv nextflow-21.10.6-all nextflow && \
     chmod +x nextflow && echo 'export PATH=$PATH:'$(pwd) >> ~/.bash_profile && source ~/.bash_profile
 
 Singularity
@@ -56,7 +56,7 @@ If you are Debian/Ubuntu, you can get neurodebian:
 High Performance computer (HPC)
 ###############################
 
-Please try ``module load singularity/3.5`` or check with an administrator or on the HPC website.
+Please try ``module load singularity/3.7`` or check with an administrator or on the HPC website.
 
 Docker
 ------

@@ -2,7 +2,7 @@ Welcome to the TractoFlow user documentation!
 =============================================
 
 .. note::
-    New release available: 2.2.1.
+    New release available: 2.3.0.
     TractoFlow now support BIDS as input data.
 
 TractoFlow pipeline is developed by the Sherbrooke Connectivity Imaging Lab (`SCIL`_)
@@ -27,8 +27,7 @@ For MacOS users, please see this section :ref:`docker-tractoflow` for setup.
 For any issues or difficulties with TractoFlow, please use our Neurostar tag: https://neurostars.org/tag/tractoflow
 
 .. tip::
-    If you want to analyse datasets with white-matter lesions, we highly recommends
-    to use our devrived version of TractoFlow: TractoFlow Atlas based Segmentation (ABS) https://github.com/scilus/TractoFlow-ABS
+    If you want to analyse datasets with white-matter lesions check the tractoflow profile ABS.
 
 .. toctree::
    :maxdepth: 1
