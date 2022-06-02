@@ -2,7 +2,7 @@ Options
 =======
 
 To display the options of Tractoflow, please use
-``nextflow run tractoflow/main.nf --help``.
+``nextflow run tractoflow -r 2.3.0 --help``.
 
 Mandatory arguments
 ------------
