@@ -53,6 +53,11 @@ If you are Debian/Ubuntu, you can get neurodebian:
     sudo apt-key adv --recv-keys --keyserver hkp://pool.sks-keyservers.net:80 0xA5D32F012649A5A9 && \
     sudo apt-get update && sudo apt-get install -y singularity-container
 
+Note that the first command contains the OS codename `xenial` (corresponding
+to Ubuntu 16.04) as an example; if your OS is different, you will need to
+retrieve the corresponding type/version from the menus in https://neuro.debian.net/index.html#get-neurodebian
+so that you can use the appropriate URL for the `wget` command.
+
 High Performance computer (HPC)
 ###############################
 
