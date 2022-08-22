@@ -27,7 +27,7 @@ Local Computer
 High Performance computer (HPC)
 ###############################
 
-1. Try ```module load nixpkgs/16.09 module load java/1.8.0_192`` or check with your administrator or on the HPC website.
+1. Try ``module load nixpkgs/16.09 module load java/1.8.0_192`` or check with your administrator or on the HPC website.
 2. Use ``wget`` to install Nextflow, change the name, add execution rights and add the Nextflow path in the bash_profile.
 
 ::
