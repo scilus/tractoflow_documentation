@@ -9,14 +9,14 @@ To run the pipeline, use the following command:
 ::
 
     # With Singularity
-    $> nextflow run tractoflow -r 2.3.0 --bids input_bids --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.sif -resume
+    $> nextflow run tractoflow -r 2.4.0 --bids input_bids --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.sif -resume
     # Or
-    $> nextflow run tractoflow -r 2.3.0 --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.sif -resume
+    $> nextflow run tractoflow -r 2.4.0 --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.sif -resume
 
     # With Docker
-    $> nextflow run tractoflow -r 2.3.0 --bids input_bids --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker scilus/docker-tractoflow:2.1.1 -resume
+    $> nextflow run tractoflow -r 2.4.0 --bids input_bids --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker scilus/docker-tractoflow:2.1.1 -resume
     # Or
-    $> nextflow run tractoflow -r 2.3.0 --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker scilus/docker-tractoflow:2.1.1 -resume
+    $> nextflow run tractoflow -r 2.4.0 --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker scilus/docker-tractoflow:2.1.1 -resume
 
 Where ``DTI_SHELLS`` are the shells used to compute the DTI metrics
 (typically b-value < 1200 e.g. "0 1000") and ``FODF_SHELLS`` are the shells used
@@ -42,7 +42,7 @@ to be executed with ``sbatch``.
     #SBATCH --mem=0
     #SBATCH --time=48:00:00
 
-    nextflow -c singularity.conf run tractoflow -r 2.3.0 --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.sif -resume
+    nextflow -c singularity.conf run tractoflow -r 2.4.0 --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.sif -resume
 
 To launch on multiple nodes, you must to use the MPI option that use Ignite executor.
 The following example use 2 nodes with 32 threads on each nodes. The follwing lines
@@ -59,7 +59,7 @@ must be saved in ``.sh`` file (e.g. ``cmd.sh``) to be executed with ``sbatch``.
 
     export NXF_CLUSTER_SEED=$(shuf -i 0-16777216 -n 1)
 
-    srun nextflow -c singularity.conf run tractoflow -r 2.3.0 --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.sif -with-mpi -resume
+    srun nextflow -c singularity.conf run tractoflow -r 2.4.0 --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.sif -with-mpi -resume
 
 To launch the pipeline on the HPC:
 

@@ -8,7 +8,7 @@ Date: October 2022
 New features
 
 
-2.3.0
+2.4.0
 ########
 Date: 05 April 2022
 
