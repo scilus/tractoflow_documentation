@@ -2,18 +2,7 @@ Options
 =======
 
 To display the options of Tractoflow, please use
-``nextflow run tractoflow -r 2.3.0 --help``.
-
-Mandatory arguments
-------------
-
-``--dti_shells dti_shells``
-  Shells selected to compute the dti metrics (generally b < 1200).
-  Please write them between quotes e.g. (--dti_shells "0 300").
-
-``--fodf_shells fodf_shells``
-  Shells selected to compute the fodf metrics (generally b > 700).
-  Please write them between quotes e.g. (--fodf_shells "0 1000").
+``nextflow run tractoflow -r 2.4.0 --help``.
 
 Optional BIDS arguments
 ------------
@@ -116,6 +105,9 @@ Options list
 
 ``--min_fa MIN_THRESHOLD`` (default: 0.5)
     Minimum FA threshold to compute the FRF.
+
+``--min_nvox MIN_NVOX_THRESHOLD`` (default: 300)
+    Minimum number of voxels to compute the FRF.
 
 ``--roi_radius RADIUS`` (default: 20)
     Region of interest radius to compute the FRF.

@@ -1,7 +1,27 @@
 Changelog
 =========
 
+2.4.0
+########
+Date: October 2022
+
+New features
+
+
 2.3.0
+########
+Date: 05 April 2022
+
+New features
+  - New profile Atlas Based Segmentation (-profile ABS)
+  - New profile "skip preprocessing" for HCP dataset (-profile skip_preprocessing)
+  - New profile "bundling" to run tracking spec skip preprocessing for HCP dataset (-profile skip_preprocessing)
+  - New profile
+  - Add option to compute dwi sh (-sh_fitting true)
+  - Gibbs correction (-run_gibbs_correction true)
+
+
+2.2.1
 #########
 Date: 09 April 2021
 
