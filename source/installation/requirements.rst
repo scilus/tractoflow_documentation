@@ -10,6 +10,10 @@ To use our Singularity container, you must install the `Singularity`_ package.
 Nextflow
 --------
 
+Note that the below sections use ``nextflow`` version ``v19.04.0`` for
+illustrative purposes: newer versions might work or be required depending on the
+pipeline at issue.
+
 Local Computer
 ##############
 1. Before installing check your current version ``java -version``. If return something as ``java version "1.X"`` and X is 8 up to 11, you can skip this step else install java.
@@ -23,7 +27,7 @@ Local Computer
 High Performance computer (HPC)
 ###############################
 
-1. Try ```module load nixpkgs/16.09 module load java/1.8.0_192`` or check with your administrator or on the HPC website.
+1. Try ``module load nixpkgs/16.09 module load java/1.8.0_192`` or check with your administrator or on the HPC website.
 2. Use ``wget`` to install Nextflow, change the name, add execution rights and add the Nextflow path in the bash_profile.
 
 ::
@@ -31,6 +35,15 @@ High Performance computer (HPC)
     $> wget https://github.com/nextflow-io/nextflow/releases/download/v19.04.0/nextflow-19.04.0-all && \
     mv nextflow-19.04.0-all nextflow && \
     chmod +x nextflow && echo 'export PATH=$PATH:'$(pwd) >> ~/.bash_profile && source ~/.bash_profile
+
+Note that a given HPC system might offer (a) readily available ``nextflow``
+version(s). If any of provided versions suffice for the pipeline at issue, the
+above step can be omitted, and reading the documentation of the HPC system is
+encouraged in order to load the suitable version. In the case of the Allianca
+Canada clusters, the above step might be substituted by adding the line
+``module load nextflow/19.04.0`` (depending on the desired and available
+versions) to the ``.bash_profile`` file and sourcing it.
+
 
 Singularity
 -----------
