@@ -22,7 +22,7 @@ Root parameter
 --------------
 
 It is possible not to follow the BIDS format. In that case, the input root parameter
-is called using ``--root`` and requires the following file structure:
+is called using ``--input`` and requires the following file structure:
 
 ::
 
