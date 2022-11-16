@@ -9,18 +9,14 @@ To run the pipeline, use the following command:
 ::
 
     # With Singularity
-    $> nextflow run tractoflow -r 2.4.0 --bids input_bids --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.sif -resume
+    $> nextflow run tractoflow -r 2.4.0 --bids input_bids -with-singularity scilus_1.4.0.sif -resume
     # Or
-    $> nextflow run tractoflow -r 2.4.0 --input input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-singularity singularity_name.sif -resume
+    $> nextflow run tractoflow -r 2.4.0 --input input_folder -with-singularity scilus_1.4.0.sif -resume
 
     # With Docker
-    $> nextflow run tractoflow -r 2.4.0 --bids input_bids --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker scilus/docker-tractoflow:2.1.1 -resume
+    $> nextflow run tractoflow -r 2.4.0 --bids input_bids -with-docker scilus/scilus:1.4.0 -resume
     # Or
-    $> nextflow run tractoflow -r 2.4.0 --input input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -with-docker scilus/docker-tractoflow:2.1.1 -resume
-
-Where ``DTI_SHELLS`` are the shells used to compute the DTI metrics
-(typically b-value < 1200 e.g. "0 1000") and ``FODF_SHELLS`` are the shells used
-to compute the fODF metrics (typically b > 700 e.g. "0 1000 2000").
+    $> nextflow run tractoflow -r 2.4.0 --input input_folder -with-docker scilus/scilus:1.4.0 -resume
 
 If you want to skip steps already processed by an anterior run, you can add `-resume` option in the command line.
 

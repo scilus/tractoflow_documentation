@@ -81,7 +81,7 @@ Then, you can build the singularity image:
 
 ::
 
-    $> singularity build singularity_name.sif singularity_scilus.def
+    $> singularity build scilus_1.4.0.sif singularity_scilus.def
 
 .. _docker-tractoflow:
 
