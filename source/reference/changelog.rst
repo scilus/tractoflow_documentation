@@ -1,6 +1,29 @@
 Changelog
 =========
 
+2.4.0
+########
+Date: November 2022
+
+New features
+  - Automatic extraction of shells when computing DTI and fODF
+  - Skip step bet_prelim_dwi when not needed
+  - Add remove_invalid step in Tracking processes
+  - Add possibility for complex BIDS structure with multiband acquisition and full reverse encoding acquisitions. (only available with cuda profile)
+  - New profile "bundling". It will activate custom tracking parameters to improve recobundle results. Local tracking will be enable with fa seeding mask and tracking mask.
+  - New profile "connectomics". It will activate custom tracking parameters to improve connectomics analysis.
+
+2.3.0
+########
+Date: 05 April 2022
+
+New features
+  - New profile Atlas Based Segmentation (-profile ABS)
+  - New profile "skip preprocessing" for HCP dataset (-profile skip_preprocessing)
+  - Add option to compute dwi sh (-sh_fitting true)
+  - Gibbs correction (-run_gibbs_correction true)
+
+
 2.2.1
 #########
 Date: 09 April 2021

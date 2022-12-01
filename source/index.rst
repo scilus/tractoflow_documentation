@@ -2,8 +2,7 @@ Welcome to the TractoFlow user documentation!
 =============================================
 
 .. note::
-    New release available: 2.2.1.
-    TractoFlow now support BIDS as input data.
+    New release available: 2.4.0.
 
 TractoFlow pipeline is developed by the Sherbrooke Connectivity Imaging Lab (`SCIL`_)
 in order to process diffusion MRI dataset from the raw data to the tractography.
@@ -27,8 +26,7 @@ For MacOS users, please see this section :ref:`docker-tractoflow` for setup.
 For any issues or difficulties with TractoFlow, please use our Neurostar tag: https://neurostars.org/tag/tractoflow
 
 .. tip::
-    If you want to analyse datasets with white-matter lesions, we highly recommends
-    to use our devrived version of TractoFlow: TractoFlow Atlas based Segmentation (ABS) https://github.com/scilus/TractoFlow-ABS
+    If you want to analyse datasets with white-matter lesions use profile ABS.
 
 .. toctree::
    :maxdepth: 1
@@ -43,6 +41,7 @@ For any issues or difficulties with TractoFlow, please use our Neurostar tag: ht
 
    pipeline/steps
    pipeline/input
+
    pipeline/options
    pipeline/profiles
    pipeline/launch

@@ -2,7 +2,7 @@ Options
 =======
 
 To display the options of Tractoflow, please use
-``nextflow run tractoflow/main.nf --help``.
+``nextflow run tractoflow -r 2.4.0 --help``.
 
 Optional BIDS arguments
 ------------
@@ -18,8 +18,13 @@ Optional BIDS arguments
   If set, it will remove all the participants that are missing any information.
 
 
+``--fs "freesurfer_output_folder"`` (default: none)
+  If you want to run Tractoflow-ABS (Atlas Based Segmentation) combined with a BIDS structure input
+  you need to have this argument.
+
 Options list
 ------------
+
 ``--b0_thr_extract_b0 MAX_VALUE``  (default: 10)
     All b-values below a maximum value are considered b=0 images.
 
@@ -84,6 +89,24 @@ Options list
 ``--dwi_interpolation METHOD`` (default: lin)
     Interpolation method [nn, lin, quad, cubic].
 
+``--max_dti_shell_value`` (default: 1200)
+    Maximum shell threshold to be consider as a DTI shell (b <= 1200).
+    This is the default behaviour to select DTI shells.
+
+``--dti_shells``
+    Shells selected to compute the DTI metrics (generally b <= 1200).
+    Please write them between quotes e.g. (--dti_shells "0 300 1000").
+    If selected, it will overwrite max_dti_shell_value.
+
+``--min_fodf_shell_value`` (default: 700)
+    Minimum shell threshold to be consider as a fODF shell (b >= 700).
+    This is the default behaviour to select fODF shells.
+
+``--fodf_shells``
+    Shells selected to compute the fODF metrics (generally b >= 700).
+    Please write them between quotes e.g. (--fodf_shells "0 1000 2000").
+    If selected, it will overwrite min_fodf_shell_value.
+
 ``--run_t1_denoising BOOL`` (default: true)
     Run T1 denoising using NLmean algorithm.
 
@@ -105,6 +128,9 @@ Options list
 
 ``--min_fa MIN_THRESHOLD`` (default: 0.5)
     Minimum FA threshold to compute the FRF.
+
+``--min_nvox MIN_NVOX_THRESHOLD`` (default: 300)
+    Minimum number of voxels to compute the FRF.
 
 ``--roi_radius RADIUS`` (default: 20)
     Region of interest radius to compute the FRF.
@@ -237,8 +263,6 @@ Optional Local Tracking arguments
 ``--local_random_seed RANDOMSEED`` (default: 0)
     [LOCAL] List of random seed numbers for the random number generator.
     Please write them as list separated using commat WITHOUT SPACE e.g. (--local_random_seed 0,1,2)
-
-
 
 ``--template_t1 PATH`` (default: /human-data/mni_152_sym_09c/t1)
     Path to the template T1 directory for antsBrainExtraction.

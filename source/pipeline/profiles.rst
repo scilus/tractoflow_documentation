@@ -7,7 +7,7 @@ To select one or multiple profiles, please use the ``-profile`` option. For exam
 
 ::
 
-    $> nextflow run tractoflow/main.nf --root input_folder --dti_shells "DTI_SHELLS" --fodf_shells "FODF_SHELLS" -profile macos,fully_reproducible -with-singularity singularity_name.img -resume
+    $> nextflow run tractoflow -r 2.4.0 --input input_folder -profile macos,fully_reproducible -with-singularity singularity_name.sif -resume
 
 Profiles available
 ------------------
@@ -25,3 +25,14 @@ Profiles available
 
 ``cbrain``
     When this profile is used, Nextflow will copy all the output files in publishDir and not use symlinks.
+
+``ABS``
+    When this profile is used, TractoFlow-ABS (Atlas Based Segmentation) is used.
+    This profile must be used for pathological data.
+    The aparc+aseg.nii.gz and wmparc.nii.gz must be in the same space than t1.nii.gz
+
+``bundling``
+    When this profile is used, it will activate custom tracking parameters to improve recobundle results.
+
+``connectomics``
+    When this profile is used, it will activate custom tracking parameters to improve connectomics analysis.
