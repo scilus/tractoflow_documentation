@@ -7,11 +7,9 @@ To display the options of Tractoflow, please use
 Optional BIDS arguments
 ------------
 
-``--participants_label "SUBID1 SUBID2"`` (default: none)
-  The label(s) of the specific participant(s) you want to analyzed.
-  It does not include "sub-".
-  Please write one or more subjects between quotes e.g. (--participants_label "01 02 04")
-  If this parameter is not provided all subjects should be analyzed
+``--bidsignore "bids_ignore_path"`` (default: none)
+  If you want to ignore some subjects/sessions/runs or some files, you can provide an extra bidsignore file.
+  Check: https://github.com/bids-standard/bids-validator#bidsignore
 
 
 ``-clean_bids BOOL`` (default: false)
