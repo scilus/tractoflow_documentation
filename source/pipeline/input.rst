@@ -6,10 +6,13 @@ Two types of input are available in TractoFlow: BIDS and an in-house structure.
 BIDS parameter
 --------------
 
-We recommend to use ``dcm2bids`` (https://github.com/unfmontreal/Dcm2Bids) to create BIDS datasets.
+We recommend to use ``dcm2bids`` (https://github.com/unfmontreal/Dcm2Bids) or ``heuviconv`` (https://github.com/nipy/heudiconv) to create BIDS datasets.
 
 TractoFlow supports BIDS as input data using ``--bids YOUR_BIDS_DATASET``. TractoFlow does some verifications
 before launching the processing to valide the BIDS format.
+
+If you need to filter some subjects/sessions/runs or some files
+you can create a bidsignore file using ``--bidsignore bids_ignore_path``. (Check: https://github.com/bids-standard/bids-validator#bidsignore)
 
 In the case that some tags or informations are missing, TractoFlow will create a json file in ``results/Read_BIDS``.
 Please complete missing informations and relaunch the pipeline replacing ``--bids YOUR_BIDS_DATASET`` with ``--bids_config results/Read_BIDS/tractoflow_bids_struct.json``.
