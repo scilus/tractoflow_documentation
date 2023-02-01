@@ -56,7 +56,7 @@ Download the last release of the Singularity container for TractoFlow:
 
 ::
 
-    $> wget http://scil.usherbrooke.ca/containers_list/scilus_1.4.2.sif
+    $> wget https://scil.usherbrooke.ca/containers/scilus_1.4.2.sif
 
 Or if you have sudo privileges
 
