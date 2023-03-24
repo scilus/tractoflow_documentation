@@ -1,6 +1,13 @@
 Changelog
 =========
 
+2.4.2
+########
+Date: March 2023
+
+New features
+  - Tractoflow is not fully working with a python 3.10 environnment with scilpy 1.5.0
+
 2.4.1
 ########
 Date: November 2022
