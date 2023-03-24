@@ -2,7 +2,7 @@ Options
 =======
 
 To display the options of Tractoflow, please use
-``nextflow run tractoflow -r 2.4.1 --help``.
+``nextflow run tractoflow -r 2.4.2 --help``.
 
 Optional BIDS arguments
 ------------
