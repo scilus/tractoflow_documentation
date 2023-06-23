@@ -64,25 +64,6 @@ Or if you have sudo privileges
 
     $> sudo singularity build scilus_1.5.0.sif docker://scilus/scilus:1.5.0
 
-For developers
-##############
-
-Clone the singularity repository for TractoFlow pipeline:
-
-::
-
-    # Clone with HTTPS
-    $> git clone https://github.com/scilus/containers-scilus.git
-
-    # Clone with SSH
-    $> git clone git@github.com:scilus/containers-scilus.git
-
-Then, you can build the singularity image:
-
-::
-
-    $> singularity build scilus_1.5.0.sif singularity_scilus.def
-
 .. _docker-tractoflow:
 
 Docker for TractoFlow
