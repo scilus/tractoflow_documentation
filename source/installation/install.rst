@@ -49,9 +49,6 @@ As a developer you will have to run tractoflow using this command:
 Singularity for TractoFlow
 --------------------------
 
-Release
-#######
-
 Download the last release of the Singularity container for TractoFlow:
 
 ::
