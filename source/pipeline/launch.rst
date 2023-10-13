@@ -40,8 +40,8 @@ to be executed with ``sbatch``.
 
     nextflow run tractoflow -r 2.4.3 --input input_folder -with-singularity singularity_name.sif -resume
 
-To launch on multiple nodes, you must to use the MPI option that use Ignite executor.
-The following example use 2 nodes with 32 threads on each nodes. The follwing lines
+To launch on multiple nodes, you must use the MPI option that use Ignite executor.
+The following example use 2 nodes with 32 threads on each nodes. The following lines
 must be saved in ``.sh`` file (e.g. ``cmd.sh``) to be executed with ``sbatch``.
 
 ::
