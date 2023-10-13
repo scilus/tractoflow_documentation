@@ -1,6 +1,15 @@
 Changelog
 =========
 
+2.4.3
+########
+Date: October 2023
+
+New features
+  - Tractoflow is not fully working with scilpy 1.6.0
+  - Profile use_cuda enables gpu implementation of local_tracking.
+  - [BF] BIDS is fully supported with eddy/topup.
+
 2.4.2
 ########
 Date: March 2023

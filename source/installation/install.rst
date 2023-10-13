@@ -7,7 +7,7 @@ Easy install method
 Enter this command in your terminal (it downloads the container and TractoFlow code in the current directory - Make sure nextflow is already installed before running this command):
 ::
 
-    curl -s https://tractoflow-documentation.readthedocs.io/en/2.4.2/install.sh | bash
+    curl -s https://tractoflow-documentation.readthedocs.io/en/2.4.3/install.sh | bash
 
 
 Detailed Installation
@@ -53,13 +53,13 @@ Download the last release of the Singularity container for TractoFlow:
 
 ::
 
-    $> wget https://scil.usherbrooke.ca/containers/scilus_1.5.0.sif
+    $> wget https://scil.usherbrooke.ca/containers/scilus_1.6.0.sif
 
 Or if you have sudo privileges
 
 ::
 
-    $> sudo singularity build scilus_1.5.0.sif docker://scilus/scilus:1.5.0
+    $> sudo singularity build scilus_1.6.0.sif docker://scilus/scilus:1.6.0
 
 .. _docker-tractoflow:
 
@@ -73,6 +73,6 @@ Download the last release of the Docker container for TractoFlow:
 
 ::
 
-    $> docker pull scilus/scilus:1.5.0
+    $> docker pull scilus/scilus:1.6.0
 
 Please see :ref:`profiles` section to use `macos` profile.

@@ -2,7 +2,7 @@ Options
 =======
 
 To display the options of Tractoflow, please use
-``nextflow run tractoflow -r 2.4.2 --help``.
+``nextflow run tractoflow -r 2.4.3 --help``.
 
 Optional BIDS arguments
 ------------
@@ -261,6 +261,9 @@ Optional Local Tracking arguments
 ``--local_random_seed RANDOMSEED`` (default: 0)
     [LOCAL] List of random seed numbers for the random number generator.
     Please write them as list separated using commat WITHOUT SPACE e.g. (--local_random_seed 0,1,2)
+
+``--local_batch_size_gpu`` (default: 10000)
+    [LOCAL-GPU] Approximate size of GPU batches (number of streamlines to track in parallel).
 
 ``--template_t1 PATH`` (default: /human-data/mni_152_sym_09c/t1)
     Path to the template T1 directory for antsBrainExtraction.
