@@ -14,7 +14,7 @@ Note that the below sections use ``nextflow`` version ``v21.10.6`` for
 illustrative purposes: newer versions might work or be required depending on the
 pipeline at issue.
 
-⚠️ Tractoflow is only compatible with ``nextflow`` < v22.x.x ⚠️
+⚠️ Tractoflow is only compatible with ``nextflow`` versions between 19.04.2 and 21.12.1 included. ⚠️
 
 Local Computer
 ##############

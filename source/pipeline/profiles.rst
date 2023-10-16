@@ -17,7 +17,8 @@ Profiles available
 
 ``use_cuda``
     When this profile is used, TractoFlow will use eddy_cuda for Eddy process. This feature is available with NVidia GPUs only.
-    Without this profile, TractoFlow will run eddy_openmp.
+    Without this profile, TractoFlow will run eddy_openmp. 
+    If local tracking is also enabled, Tractoflow will use the gpu implementation of scil_compute_local_tracking.py.
 
 ``fully_reproducible``
     When this profile is used, all the parameters will be set to have 100% reproducible results.
