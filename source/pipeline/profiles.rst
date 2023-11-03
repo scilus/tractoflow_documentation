@@ -15,10 +15,10 @@ Profiles available
 ``macos``
     When this profile is used, TractoFlow will modify a parameter (scratch) for MacOS users.
 
-``use_cuda``
-    When this profile is used, TractoFlow will use eddy_cuda for Eddy process. This feature is available with NVidia GPUs only.
-    Without this profile, TractoFlow will run eddy_openmp. 
+``use_gpu``
+    When this profile is used, TractoFlow will use eddy_cuda for Eddy process.
     If local tracking is also enabled, Tractoflow will use the gpu implementation of scil_compute_local_tracking.py.
+    This feature is available with NVidia GPUs only. Without this profile, TractoFlow will run eddy_openmp.
 
 ``fully_reproducible``
     When this profile is used, all the parameters will be set to have 100% reproducible results.
