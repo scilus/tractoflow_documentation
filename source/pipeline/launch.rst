@@ -32,7 +32,7 @@ High Performance Computer (HPC)
 The following example is based on the SLURM executor:
 
 If you want to run tractoflow, please use the same commands presented for the
-local computer. The follwing lines must be saved in ``.sh`` file (e.g. ``cmd.sh``)
+local computer. The following lines must be saved in ``.sh`` file (e.g. ``cmd.sh``)
 to be executed with ``sbatch``.
 
 ::
