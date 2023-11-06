@@ -9,14 +9,20 @@ To run the pipeline, use the following command:
 ::
 
     # With Singularity
-    $> nextflow run tractoflow -r 2.4.2 --bids input_bids -with-singularity scilus_1.5.0.sif -resume
+    $> nextflow run tractoflow -r 2.4.3 --bids input_bids -with-singularity scilus_1.6.0.sif -resume
     # Or
-    $> nextflow run tractoflow -r 2.4.2 --input input_folder -with-singularity scilus_1.5.0.sif -resume
+    $> nextflow run tractoflow -r 2.4.3 --input input_folder -with-singularity scilus_1.6.0.sif -resume
 
     # With Docker
-    $> nextflow run tractoflow -r 2.4.2 --bids input_bids -with-docker scilus/scilus:1.5.0 -resume
+    $> nextflow run tractoflow -r 2.4.3 --bids input_bids -with-docker scilus/scilus:1.6.0 -resume
     # Or
-    $> nextflow run tractoflow -r 2.4.2 --input input_folder -with-docker scilus/scilus:1.5.0 -resume
+    $> nextflow run tractoflow -r 2.4.3 --input input_folder -with-docker scilus/scilus:1.6.0 -resume
+
+    # If you have an NVIDIA GPU installed
+    $> nextflow run tractoflow -r 2.4.3 --bids input_bids -with-singularity scilus_1.6.0.sif -profile use_gpu -resume
+    # Or
+    $> nextflow run tractoflow -r 2.4.3 --input input_folder -with-singularity scilus_1.6.0.sif -profile use_gpu -resume
+
 
 If you want to skip steps already processed by an anterior run, you can add `-resume` option in the command line.
 
@@ -25,7 +31,7 @@ High Performance Computer (HPC)
 
 The following example is based on the SLURM executor:
 
-If you want to use only one node, please use the same commands presented for the
+If you want to run tractoflow, please use the same commands presented for the
 local computer. The follwing lines must be saved in ``.sh`` file (e.g. ``cmd.sh``)
 to be executed with ``sbatch``.
 
@@ -38,24 +44,25 @@ to be executed with ``sbatch``.
     #SBATCH --mem=0
     #SBATCH --time=48:00:00
 
-    nextflow -c singularity.conf run tractoflow -r 2.4.2 --input input_folder -with-singularity singularity_name.sif -resume
+    nextflow run tractoflow -r 2.4.3 --input input_folder -with-singularity singularity_name.sif -resume
 
-To launch on multiple nodes, you must to use the MPI option that use Ignite executor.
-The following example use 2 nodes with 32 threads on each nodes. The follwing lines
+To launch tractoflow on a node with a GPU, you must use the profile use_gpu in your command.
+The following example use one node with gpu. The following lines
 must be saved in ``.sh`` file (e.g. ``cmd.sh``) to be executed with ``sbatch``.
 
 ::
 
     #!/bin/sh
 
-    #SBATCH --nodes=2
+    #SBATCH --nodes=1
+    #SBATCH --gpus-per-node=v100:1
     #SBATCH --cpus-per-task=32
     #SBATCH --mem=0
     #SBATCH --time=48:00:00
 
     export NXF_CLUSTER_SEED=$(shuf -i 0-16777216 -n 1)
 
-    srun nextflow -c singularity.conf run tractoflow -r 2.4.2 --input input_folder -with-singularity singularity_name.sif -with-mpi -resume
+    nextflow run tractoflow -r 2.4.3 --input input_folder -with-singularity singularity_name.sif -resume -profile use_gpu
 
 To launch the pipeline on the HPC:
 

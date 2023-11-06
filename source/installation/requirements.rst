@@ -5,14 +5,16 @@ To run the pipeline you must install `Nextflow`_.
 To use our Singularity container, you must install the `Singularity`_ package.
 
 .. _Nextflow: https://www.nextflow.io/
-.. _Singularity: https://www.sylabs.io/docs/
+.. _Singularity: https://apptainer.org/
 
 Nextflow
 --------
 
-Note that the below sections use ``nextflow`` version ``v19.04.0`` for
+Note that the below sections use ``nextflow`` version ``v21.10.6`` for
 illustrative purposes: newer versions might work or be required depending on the
 pipeline at issue.
+
+⚠️ Tractoflow is only compatible with ``nextflow`` versions between 19.04.2 and 21.12.1 included. ⚠️
 
 Local Computer
 ##############
@@ -27,7 +29,7 @@ Local Computer
 High Performance computer (HPC)
 ###############################
 
-1. Try ``module load nixpkgs/16.09 module load java/1.8.0_192`` or check with your administrator or on the HPC website.
+1. Try ``module load nextflow/21.10.6`` or check with your administrator or on the HPC website.
 2. Use ``wget`` to install Nextflow, change the name, add execution rights and add the Nextflow path in the bash_profile.
 
 ::
@@ -39,9 +41,9 @@ High Performance computer (HPC)
 Note that a given HPC system might offer (a) readily available ``nextflow``
 version(s). If any of provided versions suffice for the pipeline at issue, the
 above step can be omitted, and reading the documentation of the HPC system is
-encouraged in order to load the suitable version. In the case of the Allianca
+encouraged in order to load the suitable version. In the case of the Alliance 
 Canada clusters, the above step might be substituted by adding the line
-``module load nextflow/19.04.0`` (depending on the desired and available
+``module load nextflow/21.10.6`` (depending on the desired and available
 versions) to the ``.bash_profile`` file and sourcing it.
 
 
@@ -55,26 +57,16 @@ If you want to use Docker on Windows or MacOS, please see the :ref:`docker-tract
 
 Local Computer
 ##############
-Install ``singularity-container``. Our current singularity container works only on Linux.
-A macOS version will be released soon.
-
-If you are Debian/Ubuntu, you can get neurodebian:
+Install ``apptainer``. Our current singularity container works only on Linux.
 
 ::
 
-    $> sudo wget -O- http://neuro.debian.net/lists/xenial.us-ca.full | sudo tee /etc/apt/sources.list.d/neurodebian.sources.list && \
-    sudo apt-key adv --recv-keys --keyserver hkp://pool.sks-keyservers.net:80 0xA5D32F012649A5A9 && \
-    sudo apt-get update && sudo apt-get install -y singularity-container
-
-Note that the first command contains the OS codename `xenial` (corresponding
-to Ubuntu 16.04) as an example; if your OS is different, you will need to
-retrieve the corresponding type/version from the menus in https://neuro.debian.net/index.html#get-neurodebian
-so that you can use the appropriate URL for the `wget` command.
+    $> sudo apt-get update && sudo apt-get install -y apptainer
 
 High Performance computer (HPC)
 ###############################
 
-Please try ``module load singularity/3.7`` or check with an administrator or on the HPC website.
+Please try ``module load apptainer`` or check with an administrator or on the HPC website.
 
 Docker
 ------
