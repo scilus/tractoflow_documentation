@@ -6,7 +6,7 @@ Changelog
 Date: October 2023
 
 New features
-  - Tractoflow is not fully working with scilpy 1.6.0
+  - Tractoflow is fully working with scilpy 1.6.0
   - Profile use_cuda is deprecated and replaced by use_gpu.
   - Profile use_gpu enables gpu implementation of local_tracking.
   - [BF] BIDS is fully supported with eddy/topup.
