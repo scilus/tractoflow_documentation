@@ -56,12 +56,13 @@ must be saved in ``.sh`` file (e.g. ``cmd.sh``) to be executed with ``sbatch``.
 
     #SBATCH --nodes=1
     #SBATCH --gpus-per-node=v100:1
+    #SBATCH --cpus-per-task=32
     #SBATCH --mem=0
     #SBATCH --time=48:00:00
 
     export NXF_CLUSTER_SEED=$(shuf -i 0-16777216 -n 1)
 
-    srun nextflow run tractoflow -r 2.4.3 --input input_folder -with-singularity singularity_name.sif -resume -profile use_gpu
+    nextflow run tractoflow -r 2.4.3 --input input_folder -with-singularity singularity_name.sif -resume -profile use_gpu
 
 To launch the pipeline on the HPC:
 
