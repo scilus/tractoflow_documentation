@@ -2,7 +2,7 @@ Welcome to the TractoFlow user documentation!
 =============================================
 
 .. note::
-    New release available: 2.4.3.
+    New release available:  2.4.4.
 
 TractoFlow pipeline is developed by the Sherbrooke Connectivity Imaging Lab (`SCIL`_)
 in order to process diffusion MRI dataset from the raw data to the tractography.

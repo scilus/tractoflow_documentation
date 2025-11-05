@@ -9,19 +9,19 @@ To run the pipeline, use the following command:
 ::
 
     # With Singularity
-    $> nextflow run tractoflow -r 2.4.3 --bids input_bids -with-singularity scilus_1.6.0.sif -resume
+    $> nextflow run tractoflow -r  2.4.4 --bids input_bids -with-singularity scilus_1.6.0.sif -resume
     # Or
-    $> nextflow run tractoflow -r 2.4.3 --input input_folder -with-singularity scilus_1.6.0.sif -resume
+    $> nextflow run tractoflow -r  2.4.4 --input input_folder -with-singularity scilus_1.6.0.sif -resume
 
     # With Docker
-    $> nextflow run tractoflow -r 2.4.3 --bids input_bids -with-docker scilus/scilus:1.6.0 -resume
+    $> nextflow run tractoflow -r  2.4.4 --bids input_bids -with-docker scilus/scilus:1.6.0 -resume
     # Or
-    $> nextflow run tractoflow -r 2.4.3 --input input_folder -with-docker scilus/scilus:1.6.0 -resume
+    $> nextflow run tractoflow -r  2.4.4 --input input_folder -with-docker scilus/scilus:1.6.0 -resume
 
     # If you have an NVIDIA GPU installed
-    $> nextflow run tractoflow -r 2.4.3 --bids input_bids -with-singularity scilus_1.6.0.sif -profile use_gpu -resume
+    $> nextflow run tractoflow -r  2.4.4 --bids input_bids -with-singularity scilus_1.6.0.sif -profile use_gpu -resume
     # Or
-    $> nextflow run tractoflow -r 2.4.3 --input input_folder -with-singularity scilus_1.6.0.sif -profile use_gpu -resume
+    $> nextflow run tractoflow -r  2.4.4 --input input_folder -with-singularity scilus_1.6.0.sif -profile use_gpu -resume
 
 
 If you want to skip steps already processed by an anterior run, you can add `-resume` option in the command line.
@@ -44,7 +44,7 @@ to be executed with ``sbatch``.
     #SBATCH --mem=0
     #SBATCH --time=48:00:00
 
-    nextflow run tractoflow -r 2.4.3 --input input_folder -with-singularity singularity_name.sif -resume
+    nextflow run tractoflow -r  2.4.4 --input input_folder -with-singularity singularity_name.sif -resume
 
 To launch tractoflow on a node with a GPU, you must use the profile use_gpu in your command.
 The following example use one node with gpu. The following lines
@@ -62,7 +62,7 @@ must be saved in ``.sh`` file (e.g. ``cmd.sh``) to be executed with ``sbatch``.
 
     export NXF_CLUSTER_SEED=$(shuf -i 0-16777216 -n 1)
 
-    nextflow run tractoflow -r 2.4.3 --input input_folder -with-singularity singularity_name.sif -resume -profile use_gpu
+    nextflow run tractoflow -r  2.4.4 --input input_folder -with-singularity singularity_name.sif -resume -profile use_gpu
 
 To launch the pipeline on the HPC:
 

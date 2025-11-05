@@ -7,7 +7,7 @@ Easy install method
 Enter this command in your terminal (it downloads the container and TractoFlow code in the current directory - Make sure nextflow is already installed before running this command):
 ::
 
-    curl -s https://tractoflow-documentation.readthedocs.io/en/2.4.3/install.sh | bash
+    curl -s https://tractoflow-documentation.readthedocs.io/en/ 2.4.4/install.sh | bash
 
 
 Detailed Installation
